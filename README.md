@@ -1,6 +1,6 @@
 # Afterpay coding test
 
-### coding requirement
+### Coding requirement
 
 Consider the following credit card fraud detection algorithm
 A credit card transaction is comprised of the following elements.
@@ -14,13 +14,21 @@ over a 24 hour sliding window period exceeds the price threshold.
 Write a method, which when given a sequence of transactions in chronological order, and a price threshold,
 returns the hashed credit card numbers that have been identified as fraudulent.
 
+- finish in one hour
+- vanila java 8, no third party lib
+
 ### Implementation walk through
-- created four classes, for creditcardtxn entity, main class, Utils class for all common methods and main fraud detection class
+- created four classes, for CreditCardTxn entity, main class, Utils class for all common methods and main fraud detection class
 - the tricky part is how do you do rolling 24 hours, my implementation used lots of java 8 stream library to make the code
 more concise. Java is notorious verbose even those stream apis. 
 - require double for loop to do rolling 24 hours window, there might be a more performant way to do this
 - apart from that is pretty straight forward.
 - I added a couple test cases
+
+### Improvement
+- parse a file to get all the txn details
+- better algo to make it more performant
+- more testing
 
 ### Author info
 - seabook chen, 15 years dev exp, familiar with java, nodejs, go, blockchain etc
